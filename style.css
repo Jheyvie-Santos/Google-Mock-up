@@ -5,6 +5,10 @@
     --night-mode-button: #303134;
     --night-mode-border: #9aa0a6;
     --night-mode-button-hover: #5f6368;
+    --night-mode-lang-color: #bdc1c6;
+    --night-mode-footer: #171717;
+    --night-mode-footer-font: #9aa0a6;
+    --night-mode-footer-border: #3c4043;
 }
 
 @font-face {
@@ -90,7 +94,7 @@ header{
 }
 
 .container{
-    height: 70%;
+    height: 75%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -158,6 +162,7 @@ header{
         & button{
             height: 100%;
             width: 48%;
+            font-size: 14px;
             cursor: pointer;
             color: var(--night-mode-font-color);
             background-color: var(--night-mode-button);
@@ -170,9 +175,97 @@ header{
             border: .5px solid var(--night-mode-button-hover);
         }
     }
+
+    & .hovers{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        flex-direction: row;
+        color: var(--night-mode-lang-color);
+        gap: .4em;
+
+        & p{
+            font-size: 14px;
+        }
+
+        & .hovers__item{
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+
+            & a{
+                text-decoration: none;
+                color: #8ab4f8;
+                font-size: 14px;
+            }
+
+            & a:visited{
+                color: #8ab4f8;
+            }
+
+            & a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 footer{
-    height: 20%;
+    height: 15%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--night-mode-footer);
+    color: var(--night-mode-footer-font);
+    bottom: 0;
+
+    & .footer__one{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 3%;
+        padding-right: 3%;
+        border-bottom: .5px solid var(--night-mode-footer-border);
+
+        & p{
+            font-size: 14px;
+        }
+    }
+
+    & .footer__two{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 3%;
+        padding-left: 3%;
+
+        & a{
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        & a:visited{
+            color: var(--night-mode-footer-font);
+        }
+
+        & a:hover{
+            text-decoration: underline;
+        }
+
+        & .hover__one, .hover__two{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        }
+    }
 }
